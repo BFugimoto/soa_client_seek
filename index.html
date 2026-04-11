@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let endpoint = "https://jsonplaceholder.typicode.com/users";
+
+        async function carregarDados() {
+            const response = await fetch(endpoint, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const data = await response.json();
+
+            const container = document.getElementById("dados-container");
+            data.forEach(user => {
+                const userDiv = document.createElement("div");
+                userDiv.innerHTML = `
+                    <p>Nome: ${user.name}</p>
+                    <p>Apelido: ${user.username}</p>
+                    <p>Email: ${user.email}</p>
+                    <div class="btn-container">
+                        <button><a href="editarPerfil.html">Editar</a></button>
+                        <button>Excluir</button>
+                    </div>
+                `;
+                container.appendChild(userDiv);
+            });
+        }
+
+        window.onload = carregarDados;
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Início</title>
+</head>
+
+<body>
+    
+    <header>
+
+        <div class="logoSite">
+            <a href="index.html">
+                <img src="/img/Logo.svg" alt="Logo">
+            </a>
+        </div>
+
+        <nav>
+
+            <div>
+                <a href="index.html">Início</a>
+            </div>
+
+            <div>
+                <a href="integrantes.html">Integrantes</a>
+            </div>
+
+            <div>
+                <a href="login.html">Login</a>
+            </div>
+
+        </nav>
+
+        <div id="pesquisar">
+
+            <form class="formSearch" action="#">
+                <input type="search" name="tipo" placeholder="Pesquisar Usuário">
+                <button><img src="/img/search2.svg" alt="Lupa"></button>
+            </form>
+
+        </div>
+
+    </header>
+
+    <main class="mainIndex">
+
+        <h1>Usuários:</h1>
+        <div id="dados-container"></div>
+
+    </main>
+
+</body>
+</html>

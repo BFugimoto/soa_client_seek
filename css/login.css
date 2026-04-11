@@ -1,0 +1,195 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --cinzaClaro: rgb(235, 235, 235);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+    
+    --azulDesq: #322BF0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --vermelhom: #EF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoBase);
+}
+
+body{
+    overflow-y: hidden;
+}
+
+/* main */
+
+.mainlogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mainlogin .bannerLogin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* login */
+
+.cardlogin {
+    width: 20rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    z-index: 1;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--brancoBase);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.logo {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.title {
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    margin: 10px 0 30px 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--preto);
+}
+
+.formLogin,
+.sign-up-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modalInput {
+    border-radius: 20px;
+    border: 1px solid var(--cinzaBasec);
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    border-radius: 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    background: var(--azulDesq);
+    color: var(--brancoBase);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-label {
+    display: flex;
+    justify-content: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.sign-up-link {
+    border: none;
+    background: none;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    padding-bottom: 0.1rem;
+    cursor: pointer;
+    color: var(--azulDesq);
+    transition: color 0.3s ease;
+}
+
+/* cadastro */
+
+.sign-up-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sign-up-content {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brancoBase);
+    margin: auto;
+    height: auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fechar { 
+    position: absolute;
+    top: 0%;
+    left: 85%;
+    color: var(--preto);
+    font-size: 3rem;
+    cursor: pointer;
+}

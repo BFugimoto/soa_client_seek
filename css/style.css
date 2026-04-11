@@ -1,0 +1,227 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --azulDesq: #322BF0;
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --vermelhom: #EF0000;
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoBase);
+}
+
+/* header */
+
+header {
+    background-color: var(--preto);
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+header .logoSite,
+header .logoSite a,
+header .logoSite a img {
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    gap: 1rem;
+}
+
+header nav a:hover {
+    color: var(--azulBase);
+    transform: translateY(-0.2rem);
+}
+
+header nav div {
+    width: 10rem;
+}
+
+header #pesquisar,
+.formSearch {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+header #pesquisar input {
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 50%;
+    border-radius: 0.8rem;
+    padding: 1rem;
+}
+
+header #pesquisar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* main */
+
+main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    align-self: flex-start;
+    margin: 2rem;
+    color: var(--preto);
+}
+
+.mainIndex #dados-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.mainIndex #dados-container div {
+    background-color: var(--cinzaBase);
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mainIndex #dados-container div .btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainIndex #dados-container div .btn-container button {
+    border: none;
+    background: none;
+    color: var(--vermelhom);
+    font-weight: bold;
+}
+
+.mainIndex #dados-container div a {
+    color: var(--azulBase);
+    font-weight: bold;
+}
+
+/* Integrantes */
+
+.mainIntegrantes ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 0.5rem;
+    color: var(--preto);
+    margin-left: 3rem;
+}
+
+/* Editar Perfil */
+
+.mainEdit {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--brancoBase);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.formEdit label {
+    align-self: flex-start;
+    color: var(--preto);
+    font-weight: bold;
+}
+
+.modalInput {
+    border-radius: 20px;
+    border: 1px solid var(--cinzaBasec);
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    border-radius: 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    background: var(--azulDesq);
+    color: var(--brancoBase);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
