@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +24,15 @@
                     <p>Apelido: ${user.username}</p>
                     <p>Email: ${user.email}</p>
                     <div class="btn-container">
-                        <button><a href="editarPerfil.html">Editar</a></button>
-                        <button>Excluir</button>
+                        <a class="btn-editar" href="editarPerfil.html">Editar</a>
+                        <button class="btn-excluir">Excluir</button>
                     </div>
                 `;
                 container.appendChild(userDiv);
             });
         }
+
+
 
         window.onload = carregarDados;
     </script>
@@ -38,7 +41,7 @@
 </head>
 
 <body>
-    
+
     <header>
 
         <div class="logoSite">
@@ -72,6 +75,10 @@
 
         </div>
 
+        <div class="perfilIcone" aria-label="Perfil">
+            <img src="/img/user2.svg" alt="Usuário">
+        </div>
+
     </header>
 
     <main class="mainIndex">
@@ -82,4 +89,5 @@
     </main>
 
 </body>
+
 </html>
