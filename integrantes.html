@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Integrantes</title>
+    <script>
+        function configurarModalLogin() {
+            const perfilBtn = document.querySelector(".perfilIcone");
+            const modal = document.getElementById("login-modal");
+            const fecharModal = document.getElementById("fechar-login-modal");
+
+            if (!perfilBtn || !modal || !fecharModal) {
+                return;
+            }
+
+            perfilBtn.addEventListener("click", (event) => {
+                modal.classList.add("ativo");
+                modal.setAttribute("aria-hidden", "false");
+            });
+            fecharModal.addEventListener("click", () => {
+                modal.classList.remove("ativo");
+                modal.setAttribute("aria-hidden", "true");
+            });
+
+
+        }
+
+        window.onload = () => {
+            configurarModalLogin();
+        };
+
+    </script>
 </head>
+
 <body>
+
 
     <header>
 
@@ -17,15 +47,19 @@
         </div>
 
         <nav>
+
             <div>
                 <a href="index.html">Início</a>
             </div>
+
             <div>
                 <a href="integrantes.html">Integrantes</a>
             </div>
-            <div>
+
+            <!-- <div>
                 <a href="login.html">Login</a>
-            </div>
+            </div> -->
+
         </nav>
 
         <div id="pesquisar">
@@ -37,9 +71,9 @@
 
         </div>
 
-        <div class="perfilIcone" aria-label="Perfil">
+        <button class="perfilIcone" aria-label="Perfil" type="button">
             <img src="/img/user2.svg" alt="Usuário">
-        </div>
+        </button>
 
     </header>
 
@@ -53,6 +87,15 @@
             <li>Otávio Domigues da Silva</li>
         </ul>
     </main>
-    
+
+    <div id="login-modal" class="login-modal-overlay" aria-hidden="true">
+        <div class="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-modal-texto">
+            <button id="fechar-login-modal" class="login-modal-close" type="button" aria-label="Fechar">x</button>
+            <p id="login-modal-texto">Voce ainda nao fez login.</p>
+            <a class="login-modal-link" href="login.html">Clique aqui para fazer login</a>
+        </div>
+    </div>
+
 </body>
+
 </html>
